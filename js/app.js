@@ -8,7 +8,6 @@ var yyyy = today.getFullYear();
 today = mm +"/" + dd + "/" + yyyy
 var contadorComment = 0; 
 var arregloDatos = [];
-var generate;
 //2 urls de imagenes
 //https://cdn.iconscout.com/icon/premium/png-256-thumb/game-17-99612.png
 //http://files.softicons.com/download/sport-icons/pretty-office-vii-icons-by-custom-icon-design/ico/Game-playingcards.ico
@@ -26,14 +25,15 @@ function obtenerDatos(){
             comments: []
         }
      );
-     post();
-     //Limpiar campos
-    //  document.getElementById('user').value = "";
-    //  document.getElementById('description').value = "";
-    //  document.getElementById('image').value = "";
      
+     //Limpiar campos
+     document.getElementById('user').value = "";
+     document.getElementById('description').value = "";
+     document.getElementById('image').value = "";
+     post();
 }
 function post(){
+    var generate;//no era global, generaba 2 posts
     for (let i = 0; i < arregloDatos.length; i++) {
         generate += 
         "<div id='commentSection'>"+
