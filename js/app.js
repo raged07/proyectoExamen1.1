@@ -45,7 +45,7 @@ function post(){
             "<span>"+(arregloDatos[i].fecha)+"</span>"+
         "</div>"+
         "<div>"+
-            "<button type='button' onclick='comment("+i+")'>Comments ("+arregloDatos[i].comments.length+")</button>"+
+            "<button type='button' onclick='comment("+i+")'>Comments </button>"+
         "</div>"+
         "<div id="+i+">";
         for (let j = 0; j < arregloDatos[i].comments.length; j++) {
@@ -55,7 +55,7 @@ function post(){
         "<div id='insComment"+i+"'></div><br>";
     }
     document.getElementById('section2').innerHTML = generate;
-        console.log(arregloDatos);
+        //console.log(arregloDatos);
 }
 
 
