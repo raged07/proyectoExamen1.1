@@ -36,8 +36,9 @@ function obtenerDatos(){
 function post(){
     for (let i = 0; i < arregloDatos.length; i++) {
         generate += 
+        "<div id='commentSection'>"+
         "<div>"+
-            "<img src="+arregloDatos[i].imagen+" height=100px width=100px>"+
+            "<img id='imag' src="+arregloDatos[i].imagen+" height=100px width=100px>"+
         "</div>"+
         "<div>"+
             "<span>"+(arregloDatos[i].usuario)+"</span>"+"<br>"+
@@ -45,30 +46,30 @@ function post(){
             "<span>"+(arregloDatos[i].fecha)+"</span>"+
         "</div>"+
         "<div>"+
-            "<button type='button' onclick='comment("+i+")'>Comments </button>"+
+            "<button id='btnComment' type='button' onclick='comment("+i+")'>Comments </button>"+
         "</div>"+
         "<div id="+i+">";
         for (let j = 0; j < arregloDatos[i].comments.length; j++) {
             generate += "<div>Comment "+(arregloDatos[i].comments[j])+"</div><br>";
         }
         generate += "</div>"+
-        "<div id='insComment"+i+"'></div><br>";
+        "<div id='insComment"+i+"'></div><br>"+
+        "</div>"
     }
     document.getElementById('section2').innerHTML = generate;
-        //console.log(arregloDatos);
 }
 
 
 function comment(comment){
     var inComment = "<div><span>Comment</span></div>"+
-        "<div><input type='text' id='inpComment'><button onclick='add("+comment+")'>Post</button></div>";
+        "<div><input type='text' id='inpComment'><button id='btnPost' onclick='add("+comment+")'>Post</button></div>";
         document.getElementById('insComment'+comment).innerHTML = inComment;
 }
 
 
 function add(pushComment){
     var inpComment = document.getElementById('inpComment').value;
-    var posted = inpComment +" - "+ today;
+    var posted = inpComment +" -> "+ today;
     arregloDatos[pushComment].comments.push(posted);
     post();
 }

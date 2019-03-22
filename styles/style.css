@@ -1,12 +1,68 @@
+body{
+    /* background-color: rgb(230, 230, 230); */
+}
 #user, #description, #image{
     /* background-color: aqua; */
     display: block;
-   
+    border-radius: 7px;
+    border-style: groove;
+    width: 350px;
+}
+#btnSave, #btnPost, #btnComment{
+    width: 100px;
+    border-radius: 10px;
+}
+#inpComment{
+    border-radius: 10px;
+}
+#imag{
+    background-color: rgb(202, 202, 202); 
+    border: 1px dashed;
+    border-radius: 10px;
 }
 h2{
+    margin: 20px;
+    padding: 0px;
+    display: block;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* background-color: blueviolet; */
 }
+#section1{
+    /* background-color:  rgb(174, 230, 230); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid;
+    border-radius: 15px;
+    border-style: groove;
+}
+#dataSection{
+    /* background-color: rgb(151, 197, 197); */
+    margin-left: 5%;
+    margin-right: 5%;
+}
 #section2{
-    background-color: brown;
+    /* background-color: rgb(174, 230, 230); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid;
+    border-radius: 15px;
+    border-style: dotted;
+}
+#commentSection{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20%;
+    margin-right: 10%;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: 20% 45% 10%;
+
 }
